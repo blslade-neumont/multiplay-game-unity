@@ -196,6 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ready: P2 Ready
   _notReady: P2 Not Ready
+  _readyColor: {r: 0, g: 0.8, b: 0, a: 1}
+  _notReadyColor: {r: 0.8, g: 0, b: 0, a: 1}
   _readyButton: Fire2
 --- !u!1 &469509705
 GameObject:
@@ -285,6 +287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ready: P1 Ready
   _notReady: P1 Not Ready
+  _readyColor: {r: 0, g: 0.8, b: 0, a: 1}
+  _notReadyColor: {r: 0.8, g: 0, b: 0, a: 1}
   _readyButton: Fire1
 --- !u!1 &555315509
 GameObject:
@@ -587,9 +591,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player 1 uses
+  m_Text: 'Player 1:
 
-    ''Left Control'''
+    Press ''A'' or Left Click'
 --- !u!222 &1053160497
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -718,7 +722,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -100, y: 0}
-  m_SizeDelta: {x: 300, y: 100}
+  m_SizeDelta: {x: 306, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1904639196
 MonoBehaviour:
@@ -752,9 +756,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Player 2 uses
+  m_Text: 'Player 2:
 
-    ''Right Control'''
+    Press ''L'' or Right Click'
 --- !u!222 &1904639197
 CanvasRenderer:
   m_ObjectHideFlags: 0
