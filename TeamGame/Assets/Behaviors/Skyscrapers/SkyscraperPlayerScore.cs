@@ -11,8 +11,6 @@ public class SkyscraperPlayerScore : MonoBehaviour
     [SerializeField] private Color _color;
     [SerializeField] private string _playerName;
 
-    [SerializeField] private float _score;
-
     private Text _text;
 
     void Start()
@@ -23,7 +21,7 @@ public class SkyscraperPlayerScore : MonoBehaviour
     void Update()
     {
         _text.color = _color;
-        if (!_player.isDead) _score += _controller.pointsPerSecond * Time.deltaTime;
-        _text.text = _playerName + ": " + Mathf.Floor(_score);
+        if (!_player.isDead) _player.score += _controller.pointsPerSecond * Time.deltaTime;
+        _text.text = _playerName + ": " + Mathf.Floor(_player.score);
     }
 }

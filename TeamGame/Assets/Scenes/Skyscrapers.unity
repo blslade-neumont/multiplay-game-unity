@@ -453,11 +453,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224307382137642592, guid: 3ce8dce3642d755499dff5e89438a6ee,
     type: 2}
   m_PrefabInternal: {fileID: 1295870548}
---- !u!1 &756254547 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1625962504904346, guid: c28ffc22d77d3394483af6a1bd71e875,
-    type: 2}
-  m_PrefabInternal: {fileID: 768610779}
 --- !u!114 &756254550 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114052432462786584, guid: c28ffc22d77d3394483af6a1bd71e875,
@@ -615,8 +610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0497b205f5bc72b43a48dd11c45c1a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player1: {fileID: 1880610842}
-  _player2: {fileID: 756254547}
+  _player1: {fileID: 1880610845}
+  _player2: {fileID: 756254550}
   _skyscraperPrefabs:
   - {fileID: 1862616064361126, guid: 7971ef784df79fa4e98a4905a4b8f70d, type: 2}
   _variation: 1
@@ -890,11 +885,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c28ffc22d77d3394483af6a1bd71e875, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1880610842 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1625962504904346, guid: c28ffc22d77d3394483af6a1bd71e875,
-    type: 2}
-  m_PrefabInternal: {fileID: 1880610841}
 --- !u!114 &1880610845 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114052432462786584, guid: c28ffc22d77d3394483af6a1bd71e875,

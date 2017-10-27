@@ -4,33 +4,28 @@ using System.Linq;
 using System.Text;
 using UnityEngine.SceneManagement;
 
-public class GameController
+public static class GameController
 {
-    public GameController()
-    {
-        
-    }
-
-    private bool isStarted = false;
-    public void StartGame()
+    private static bool isStarted = false;
+    public static void StartGame()
     {
         if (isStarted) throw new InvalidOperationException("This game has already been started!");
         isStarted = true;
         loadMinigame();
     }
-    public void EndMinigame(int p1score, int p2score)
+    public static void EndMinigame(int p1score, int p2score)
     {
-        p1score += p1score;
-        p2score += p2score;
+        GameController.p1score = p1score;
+        GameController.p2score = p2score;
         loadMinigame();
     }
 
-    private int p1score = 0, p2score = 0;
-    private int minigamesLeft = 10;
+    public static int p1score = 0, p2score = 0;
+    private static int minigamesLeft = 10;
     
-    private void loadMinigame()
+    private static void loadMinigame()
     {
-        if (this.minigamesLeft-- == 0)
+        if (minigamesLeft-- == 0)
         {
             endGame();
             return;
@@ -55,7 +50,7 @@ public class GameController
             throw new InvalidOperationException();
         }
     }
-    private void endGame()
+    private static void endGame()
     {
         SceneManager.LoadScene("GameEnd");
     }
