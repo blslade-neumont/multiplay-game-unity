@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 163037342}
   - component: {fileID: 163037343}
   - component: {fileID: 163037344}
+  - component: {fileID: 163037345}
   m_Layer: 0
   m_Name: player2-1
   m_TagString: Untagged
@@ -320,7 +321,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1224629653}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &163037340
 MonoBehaviour:
@@ -354,7 +355,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!61 &163037342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -411,6 +412,20 @@ MonoBehaviour:
   _fireTrigger: IsFiring
   _fireButton: Fire2
   _cameraShakey: {fileID: 1594570245}
+--- !u!114 &163037345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 163037337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf550eefafa174140bf68291ab2be0d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputKey: Fire2
+  _invert: 0
+  _toShow: {fileID: 180780811}
 --- !u!1 &180780811
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 180780813}
   - component: {fileID: 180780812}
+  - component: {fileID: 180780814}
   m_Layer: 0
   m_Name: player2-laser
   m_TagString: Untagged
@@ -475,13 +491,29 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 180780811}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 175, y: 1, z: 1}
+  m_LocalScale: {x: 190, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1224629653}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180780814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 180780811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df700cb00dbddb4cbffd8d70bc3cd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToFollow: {fileID: 163037339}
+  _offset: {x: 0, y: 0, z: 0}
+  _lockX: 1
+  _lockY: 0
+  _lockZ: 1
 --- !u!1 &983472193
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +908,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2134811607}
+  - {fileID: 1252299871}
   - {fileID: 163037339}
+  - {fileID: 180780813}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -889,6 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1252299871}
   - component: {fileID: 1252299870}
+  - component: {fileID: 1252299872}
   m_Layer: 0
   m_Name: player1-laser
   m_TagString: Untagged
@@ -944,13 +979,29 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1252299869}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 175, y: 1, z: 1}
+  m_LocalScale: {x: 190, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1224629653}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1252299872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1252299869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df700cb00dbddb4cbffd8d70bc3cd33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectToFollow: {fileID: 2134811607}
+  _offset: {x: 0, y: 0, z: 0}
+  _lockX: 1
+  _lockY: 0
+  _lockZ: 1
 --- !u!1 &1442807669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1442,7 @@ GameObject:
   - component: {fileID: 2134811610}
   - component: {fileID: 2134811611}
   - component: {fileID: 2134811612}
+  - component: {fileID: 2134811613}
   m_Layer: 0
   m_Name: player1-1
   m_TagString: Untagged
@@ -1485,7 +1537,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!61 &2134811610
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1542,3 +1594,17 @@ MonoBehaviour:
   _fireTrigger: IsFiring
   _fireButton: Fire1
   _cameraShakey: {fileID: 1594570245}
+--- !u!114 &2134811613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2134811605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf550eefafa174140bf68291ab2be0d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputKey: Fire1
+  _invert: 0
+  _toShow: {fileID: 1252299869}
