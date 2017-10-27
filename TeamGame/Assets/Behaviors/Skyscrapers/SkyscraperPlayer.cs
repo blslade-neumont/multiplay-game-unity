@@ -10,6 +10,8 @@ public class SkyscraperPlayer : MonoBehaviour
 
     [SerializeField] float lastHitDistance;
 
+    [SerializeField] public float score;
+
     private new Rigidbody2D rigidbody2D;
 
     public bool isDead;

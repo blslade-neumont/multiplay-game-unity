@@ -5,8 +5,8 @@ using Random = System.Random;
 
 public class SkyscraperController : MonoBehaviour
 {
-    [SerializeField] private GameObject _player1;
-    [SerializeField] private GameObject _player2;
+    [SerializeField] private SkyscraperPlayer _player1;
+    [SerializeField] private SkyscraperPlayer _player2;
 
     [SerializeField] private GameObject[] _skyscraperPrefabs;
 
@@ -22,7 +22,8 @@ public class SkyscraperController : MonoBehaviour
 
     void Start()
     {
-
+        _player1.score = GameController.p1score;
+        _player2.score = GameController.p2score;
     }
 
     void Update()
@@ -37,6 +38,11 @@ public class SkyscraperController : MonoBehaviour
             skyscraper.transform.position = this.transform.position;
             skyscraper.transform.position = new Vector3(this.transform.position[0], this.transform.position[1] + (float)(rnd.NextDouble() - .5) * _variation, this.transform.position[2]);
             _variation += _variationGrowth;
+        }
+
+        if (_player1.isDead && _player2.isDead)
+        {
+            GameController.EndMinigame(Mathf.FloorToInt(_player1.score), Mathf.FloorToInt(_player2.score));
         }
     }
 }

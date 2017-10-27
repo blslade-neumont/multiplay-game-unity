@@ -47,7 +47,6 @@ public class MenuCountdown : MonoBehaviour
 
     private void startGame()
     {
-        var controller = new GameController();
-        controller.StartGame();
+        GameController.StartGame();
     }
 }
