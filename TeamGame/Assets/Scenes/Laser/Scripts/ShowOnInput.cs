@@ -8,7 +8,7 @@ public class ShowOnInput : MonoBehaviour
     [SerializeField] private string _inputKey;
     [SerializeField] private bool _invert = false;
     [SerializeField] private GameObject _toShow;
-	
+
 	// Update is called once per frame
 	void FixedUpdate () {
 	    if (_toShow)

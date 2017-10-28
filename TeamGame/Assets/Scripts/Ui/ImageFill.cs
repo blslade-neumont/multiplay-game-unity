@@ -35,6 +35,7 @@ public class ImageFill : MonoBehaviour
         if (!_image)
             _image = GetComponent<Image>();
         Update();
+        _fillAmount = Mathf.Clamp01(_fillAmount);
     }
 
     // Update is called once per frame

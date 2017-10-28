@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/FlappyBirds.unity
     guid: 4f90b4326da1188438351495b8dacb51
   - enabled: 1
-    path: Assets/Scenes/Lasers.unity
-    guid: b70a8f08306294044881e286df59ce36
-  - enabled: 1
     path: Assets/Scenes/Skyscrapers.unity
     guid: e3146838cfe5b54419475c12456a82fc
+  - enabled: 1
+    path: Assets/Scenes/Lasers.unity
+    guid: 5cafad08f1b1656428bddf868c6d3011
   - enabled: 1
     path: Assets/Scenes/GameEnd.unity
     guid: a1302a8f482d3594ab1b1ea9a9c911cd
