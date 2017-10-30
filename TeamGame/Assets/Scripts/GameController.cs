@@ -21,7 +21,7 @@ public static class GameController
     }
 
     public static int p1score = 0, p2score = 0;
-    private static int minigamesLeft = 10;
+    private static int minigamesLeft = 5;
     
     private static void loadMinigame()
     {

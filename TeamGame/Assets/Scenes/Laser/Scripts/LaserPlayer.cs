@@ -95,16 +95,16 @@ public class LaserPlayer : MonoBehaviour
 
     public void GetLaserRange(out float min, out float max)
     {
-        Vector3 pos = _transform.position;
-        min = pos.y - _laserHeight / 2;
-        max = pos.y + _laserHeight / 2;
+        float h = _transform.position.y;
+        min = h - _laserHeight;
+        max = h + _laserHeight;
     }
 
     void GetPlayerHitboxRange(out float min, out float max)
     {
         float playerH = _transform.position.y;
 
-        min = playerH + _playerBounds.min.y;
+        min = playerH - _playerBounds.min.y;
         max = playerH + _playerBounds.max.y;
     }
 

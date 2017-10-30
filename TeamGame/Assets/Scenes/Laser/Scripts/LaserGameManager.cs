@@ -39,6 +39,6 @@ public class LaserGameManager : MonoBehaviour
 
     public void FinishGame()
     {
-        GameController.EndMinigame(_player1.Score, _player2.Score);
+        GameController.EndMinigame(_player1.Score + GameController.p1score, _player2.Score + GameController.p2score);
     }
 }

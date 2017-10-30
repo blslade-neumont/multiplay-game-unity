@@ -12,7 +12,7 @@ public class GameEndUi : MonoBehaviour
 	// Use this for initialization
 	void Start () {
 		_p1Text.SetScore(GameController.p1score);
-		_p1Text.SetScore(GameController.p2score);
+		_p2Text.SetScore(GameController.p2score);
 	}
 	
 	// Update is called once per frame
